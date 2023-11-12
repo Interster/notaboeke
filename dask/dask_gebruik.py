@@ -1,4 +1,6 @@
-#%%
+#%%  Vanaf:  https://www.youtube.com/watch?v=EybGGLbLipI
+# Volledige DASK tutoriaal
+
 %%time 
 from time import sleep
 from dask import delayed
@@ -41,15 +43,36 @@ z.compute()
 z
 z.visualize()
 # %%
+data = [1, 2, 3, 4, 5, 6, 7, 8]
+
+#%% Sekwensieel (stadig sonder DASK)
 %%time 
 
 results = []
 
 for x in data:
-    y = delayed.(inc)(x)
+    y = inc(x)
+    results.append(y)
+
+total = sum(results)
+print('Resultaat stadig', total)
+
+# %%
+
+#%% with DASK
+%%time 
+
+results = []
+
+for x in data:
+    y = delayed(inc)(x)
     results.append(y)
 
 total = delayed(sum)(results)
-print('Before computing', total)
+print('voor computing', total)
 result = total.compute()
-print("After computing : ", result)
+print("Na computing : ", result)
+
+total.visualize()
+
+# %%
