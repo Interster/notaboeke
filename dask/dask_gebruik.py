@@ -1,7 +1,7 @@
 #%%  Vanaf:  https://www.youtube.com/watch?v=EybGGLbLipI
 # Volledige DASK tutoriaal
 
-%%time 
+
 from time import sleep
 from dask import delayed
 
