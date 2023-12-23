@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+
+<!--
+  File:     MV1.xml
+  Inputs:
+    name:          MV1
+    type:          light single
+    max weight:    352.8 lb
+    wing span:     39.372 ft
+    length:        9.843 ft
+    wing area:     129.18 sq-ft
+    gear type:     tricycle
+    retractable?:  yes
+    # engines:     1
+    engine type:   piston
+    engine layout: aft fuselage
+    yaw damper?    no
+
+  Outputs:
+    wing loading:  2.73 lb/sq-ft
+    CL-alpha:      5 per radian
+    CL-0:          0.25
+    CL-max:        1.4
+    CD-0:          0.024
+    K:             0.04
+
+'n Blok 1 meeuvlerk is die korrekte koeefisiente, maar minder tabelle.
+-->
+

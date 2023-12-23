@@ -80,3 +80,22 @@ b_xml = ET.tostring(root)
 with open("mvnuut.xml", "wb") as f:
 	f.write(b_xml)
 # %%
+# Kombineer twee tekslêers.  Een voorvoegsel van die XML en die lyf van die lêer
+# Maak die lêers oop:
+leer1 = open('JSBsimVoor.xml', 'r')
+leer2 = open('mvnuut.xml', 'r')
+
+# Lees die inhoud van die 2 lêers in veranderlikes
+inhoud1 = leer1.read()
+inhoud2 = leer2.read()
+
+# Maak die lêers toe
+leer1.close()
+leer2.close()
+
+# Skryf die samestelling uit
+uitsetleer = open('mvsaam.xml', 'w')
+
+uitsetleer.write(inhoud1 + inhoud2)
+
+uitsetleer.close()
